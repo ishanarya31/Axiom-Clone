@@ -74,9 +74,9 @@ export const TokenColumn = memo(function TokenColumn({ category, tokens, liveDat
 
 
   return (
-    <div className="flex-1 min-w-0 relative flex flex-col h-full bg-neutral-950 border border-neutral-800 rounded-lg overflow-hidden">
+    <div className="flex flex-col h-full bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
       {/* Header - Fixed at top */}
-      <div className="flex-shrink-0 bg-neutral-950 border-b border-neutral-800 px-3 py-2">
+      <div className="flex-shrink-0 bg-neutral-900 border-b border-neutral-800 px-3 py-2">
         <div className="flex items-center gap-2">
           <h3 className="text-sm font-semibold text-white">{categoryLabels[category]}</h3>
           <button 
@@ -96,7 +96,7 @@ export const TokenColumn = memo(function TokenColumn({ category, tokens, liveDat
       </div>
       
       {/* Scrollable content area */}
-      <div className="flex-1 overflow-y-auto overflow-x-hidden column-scroll">
+      <div className="flex-1 overflow-y-auto overflow-x-hidden column-scroll min-h-0">
         <div className="space-y-2 p-2">
           {tokens.map((token) => (
             <TokenCard 
